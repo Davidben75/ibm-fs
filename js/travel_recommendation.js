@@ -5,7 +5,7 @@ let textHTML = "";
 let searchValue = null;
 
 const loadJson = async () => {
-    await fetch("../public/travel_recommendation_api.json")
+    await fetch("/travel_recommendation_api.json")
         .then((res) => res.json())
         .then((data) => {
             displayCities(data.countries);
