@@ -10,7 +10,7 @@ const loadJson = async () => {
         {
             method: "GET",
             headers: {
-                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Origin": "https://davidben75.github.io",
             },
         }
     )
