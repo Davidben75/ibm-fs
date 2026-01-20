@@ -31,7 +31,9 @@ const handleSubmit = async (e) => {
 
     recommendationSection.innerHTML = "";
     let result;
-    await fetch("../public/travel_recommendation_api.json")
+    await fetch(
+        "https://raw.githubusercontent.com/Davidben75/ibm-fs/main/public/travel_recommendation_api.json"
+    )
         .then((res) => res.json())
         .then((data) => {
             result = data;
