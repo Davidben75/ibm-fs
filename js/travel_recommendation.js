@@ -6,12 +6,9 @@ let searchValue = null;
 
 const loadJson = async () => {
     await fetch(
-        "https://github.com/Davidben75/ibm-fs/blob/main/public/travel_recommendation_api.json",
+        "https://raw.githubusercontent.com/Davidben75/ibm-fs/main/public/travel_recommendation_api.json",
         {
             method: "GET",
-            headers: {
-                "Access-Control-Allow-Origin": "https://davidben75.github.io",
-            },
         }
     )
         .then((res) => res.json())
