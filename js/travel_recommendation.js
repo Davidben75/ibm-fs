@@ -6,13 +6,19 @@ let searchValue = null;
 
 const loadJson = async () => {
     await fetch(
-        "https://github.com/Davidben75/ibm-fs/blob/main/public/travel_recommendation_api.json"
+        "https://github.com/Davidben75/ibm-fs/blob/main/public/travel_recommendation_api.json",
+        {
+            method: "GET",
+            headers: {
+                "Access-Control-Allow-Origin": "*",
+            },
+        }
     )
         .then((res) => res.json())
         .then((data) => {
             displayCities(data.countries);
         })
-        .catch((err) => console.error("Unexpected error"));
+        .catch((err) => console.error("Unexpected error loading JSON", err));
 };
 
 const handleChangeInput = (e) => {
